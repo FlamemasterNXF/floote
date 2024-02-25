@@ -10,6 +10,6 @@ const uHTML = {
         for (let i = 0; i < TABS.length; i++) {
             DOM(`${TABS[i]}Page`).style.display = 'none'
         }
-        switchTab('ex')
+        switchTab(data.nav.current, true)
     }
 }
