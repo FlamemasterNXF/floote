@@ -6,4 +6,6 @@ function switchTab(tab){
 
     if(tab === 'items') makeItems()
     else document.getElementById(`itemRowContainer`).replaceChildren()
+
+    if(tab === 'merge') updateAnnihilationTexts()
 }

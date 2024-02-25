@@ -1,5 +1,5 @@
 //Important Constants for Loading
-const TABS = ["ex"]
+const TABS = ["ex", "items", "merge"]
 
 const uHTML = {
     update(){

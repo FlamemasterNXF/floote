@@ -7,29 +7,31 @@ function makeItems(){
     firstRow.style.marginTop = '4rem'
     document.getElementById('itemRowContainer').append(firstRow)
 
-    for (let i = 0; i < data.items.length; i++) {
-        let item = document.createElement('button')
-        let rarity = rarities[data.items[i].rarity]
-        item.style.border = `1px solid ${rarity.color}`
-        item.style.background = 'black'
-        item.style.marginLeft = `0.2rem`
-        item.style.marginRight = `0.2rem`
-        item.setAttribute("tooltip", `A ${rarity.name} ${data.items[i].name}\n\n"${data.items[i].desc}"`)
+    for (let i = data.items.length-1; i > 0-1; i--) {
+        for (let j = 0; j < data.items[i].length; j++) {
+            let item = document.createElement('button')
+            let rarity = rarities[data.items[i][j].rarity]
+            item.style.border = `1px solid ${rarity.color}`
+            item.style.background = 'black'
+            item.style.marginLeft = `0.2rem`
+            item.style.marginRight = `0.2rem`
+            item.setAttribute("tooltip", `A ${rarity.name} ${data.items[i][j].name}\n\n"${data.items[i][j].desc}"`)
 
-        let icon = document.createElement('img')
-        icon.src = `${data.items[i].icon}`
+            let icon = document.createElement('img')
+            icon.src = `${data.items[i][j].icon}`
 
-        item.append(icon)
-        document.getElementById(`itemRow${rowNum}`).append(item)
+            item.append(icon)
+            document.getElementById(`itemRow${rowNum}`).append(item)
 
-        pushed++
-        if(pushed >= 8){
-            let row = document.createElement('div')
-            rowNum++
-            row.id = `itemRow${rowNum}`
-            row.style.marginTop = '0.5rem'
-            document.getElementById(`itemRowContainer`).append(row)
-            pushed = 0
+            pushed++
+            if(pushed >= 8){
+                let row = document.createElement('div')
+                rowNum++
+                row.id = `itemRow${rowNum}`
+                row.style.marginTop = '0.5rem'
+                document.getElementById(`itemRowContainer`).append(row)
+                pushed = 0
+            }
         }
     }
 }

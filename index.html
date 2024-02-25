@@ -21,6 +21,7 @@
     <script defer src="src/items/itemRarity.js"></script>
     <script defer src="src/items/itemDB.js"></script>
     <script defer src="src/items/items.js"></script>
+    <script defer src="src/items/annihilation.js"></script>
 
     <script defer src="src/data.js"></script>
     <script defer src="src/main.js"></script>
@@ -63,6 +64,7 @@
     <div class="flexBox" id="tabs" style="margin-bottom: 0.5rem">
         <button class="tabButton" id="exNav" onclick="switchTab('ex')" style="color: #cd985c; border-color: #614200">The Circle</button>
         <button class="tabButton" id="itemsNav" onclick="switchTab('items')" style="color: #cd985c; border-color: #614200">Items</button>
+        <button class="tabButton" id="mergeNav" onclick="switchTab('merge')" style="color: #cd985c; border-color: #614200">Annihilation</button>
     </div>
     <div class="flexBox" id="exPage" style="flex-direction: column">
         <div id="circleContainer" style="margin-top: 5rem" onclick="openLootbox()">
@@ -74,6 +76,14 @@
     </div>
     <div class="flexBox" id="itemsPage" style="flex-direction: column">
         <div class="flexBox" id="itemRowContainer" style="flex-direction: column"></div>
+    </div>
+    <div class="flexBox" id="mergePage" style="flex-direction: column">
+        <button class="annihilateButton" id="annihilation0" onclick="annihilate(0)" style="color: #606060; border: 2px solid #606060">R0</button>
+        <button class="annihilateButton" id="annihilation1" onclick="annihilate(1)" style="color: #606060; border: 2px solid #0091d2">R1</button>
+        <button class="annihilateButton" id="annihilation2" onclick="annihilate(2)" style="color: #606060; border: 2px solid #bd00d2">R2</button>
+        <button class="annihilateButton" id="annihilation3" onclick="annihilate(3)" style="color: #606060; border: 2px solid #d20000">R3</button>
+        <div class="centeredTexts" id="annihilationGainText" style="color: goldenrod; margin-top: 1rem">You exploded a free gwa!</div>
+        <i class="centeredTexts" style="color: #383232; margin-top: 2rem">If you have at least three Items of one Rarity they can be ANNIHILATED, creating a random Item of the next Rarity.<br>Mythical Items cannot be ANNIHILATED.</i>
     </div>
 </div>
 </body>

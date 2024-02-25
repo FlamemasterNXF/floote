@@ -60,3 +60,17 @@
     opacity: 1;
     transition: 1s;
 }
+.annihilateButton{
+    background: black;
+    width: 30rem;
+    height: 3rem;
+    margin-top: 1rem;
+}
+#annihilationGainText{
+    opacity: 0;
+    transition: 1s;
+}
+#annihilationGainText.fade-in {
+    opacity: 1;
+    transition: 1s;
+}
