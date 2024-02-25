@@ -10,6 +10,8 @@ function getDefaultObject() {
     return {
         nav: {current:"ex", last:"ex"},
 
+        circle: {progress: 0},
+
         lastTick: 0,
         loadedVersion: VERSION,
         offline: true,

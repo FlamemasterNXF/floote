@@ -23,3 +23,32 @@
     background: black;
     border: 2px solid;
 }
+.circular-progress {
+    position: relative;
+    height: 15rem;
+    width: 15rem;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+}
+.circular-progress:before {
+    content: "";
+    position: absolute;
+    height: 84%;
+    width: 84%;
+    background-color: #000000;
+    border-radius: 50%;
+}
+.value-container {
+    position: relative;
+    color: goldenrod;
+}
+#circleContainer {
+    height: 15rem;
+    width: 15rem;
+    background-color: #000000;
+    border-radius: 8px;
+    place-items: center;
+    position: relative;
+    display: grid;
+}

@@ -12,6 +12,8 @@ function mainLoop() {
     // Check for hotkey usage
     //if (controls["m"].pressed)
 
+    progress(data.circle.progress, uDiff)
+
     // Update HTML
     uHTML.update()
 }

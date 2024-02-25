@@ -17,6 +17,8 @@
     <script defer src="src/etc/hotkeys.js"></script>
     <script defer src="src/etc/tabs.js"></script>
 
+    <script defer src="src/circle.js"></script>
+
     <script defer src="src/data.js"></script>
     <script defer src="src/main.js"></script>
     <script defer src="src/update.js"></script>
@@ -56,10 +58,14 @@
 </div>
 <div class="layer" id="gameLayer">
     <div class="flexBox" id="tabs" style="margin-bottom: 0.5rem">
-        <button class="tabButton" id="exNav" onclick="switchTab('ex')" style="color: #cd985c; border-color: #614200">Floote</button>>
+        <button class="tabButton" id="exNav" onclick="switchTab('ex')" style="color: #cd985c; border-color: #614200">The Circle</button>>
     </div>
     <div class="flexBox" id="exPage" style="flex-direction: column">
-        <div class="centeredTexts">Hi chat!</div>
+        <div id="circleContainer" style="margin-top: 5rem" onclick="console.log('pog')">
+            <div class="circular-progress" id="bar0">
+                <div class="value-container" style="font-family: DosisLight; font-size: 1.2rem">0%</div>
+            </div>
+        </div>
     </div>
 </div>
 </body>
