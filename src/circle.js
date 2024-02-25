@@ -11,7 +11,7 @@ function progress(x, diff){
     )`
 
     if(data.circle.progress >= 100) return data.circle.progress = 100
-    data.circle.progress += 1*diff
+    data.circle.progress += (1+getCircleSpeedIncrease())*diff
 }
 
 function openLootbox(stack = 0){
@@ -33,4 +33,8 @@ function openLootbox(stack = 0){
 
     data.circle.progress = 0
     data.items[item.rarity].push(item)
+}
+
+function getCircleSpeedIncrease(){
+    return (getTotalItems(3)/10)+(data.items[3].length/2)+(data.items[4].length*2)
 }

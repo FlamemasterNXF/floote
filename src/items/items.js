@@ -35,3 +35,11 @@ function makeItems(){
         }
     }
 }
+
+function getTotalItems(bound = data.items.length){
+    let total = 0
+    for (let i = 0; i < bound; i++) {
+        total += data.items[i].length
+    }
+    return total
+}
