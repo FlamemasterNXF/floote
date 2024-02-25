@@ -20,6 +20,7 @@
     <script defer src="src/circle.js"></script>
     <script defer src="src/items/itemRarity.js"></script>
     <script defer src="src/items/itemDB.js"></script>
+    <script defer src="src/items/items.js"></script>
 
     <script defer src="src/data.js"></script>
     <script defer src="src/main.js"></script>
@@ -60,7 +61,8 @@
 </div>
 <div class="layer" id="gameLayer">
     <div class="flexBox" id="tabs" style="margin-bottom: 0.5rem">
-        <button class="tabButton" id="exNav" onclick="switchTab('ex')" style="color: #cd985c; border-color: #614200">The Circle</button>>
+        <button class="tabButton" id="exNav" onclick="switchTab('ex')" style="color: #cd985c; border-color: #614200">The Circle</button>
+        <button class="tabButton" id="itemsNav" onclick="switchTab('items')" style="color: #cd985c; border-color: #614200">Items</button>
     </div>
     <div class="flexBox" id="exPage" style="flex-direction: column">
         <div id="circleContainer" style="margin-top: 5rem" onclick="openLootbox()">
@@ -69,6 +71,9 @@
             </div>
         </div>
         <div class="centeredTexts" id="lootboxText" style="color: goldenrod; margin-top: 1rem">You gained a free gwa!</div>
+    </div>
+    <div class="flexBox" id="itemsPage" style="flex-direction: column">
+        <div class="flexBox" id="itemRowContainer" style="flex-direction: column"></div>
     </div>
 </div>
 </body>

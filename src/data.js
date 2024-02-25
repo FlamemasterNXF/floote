@@ -11,6 +11,7 @@ function getDefaultObject() {
         nav: {current:"ex", last:"ex"},
 
         circle: {progress: 0},
+        items: [],
 
         lastTick: 0,
         loadedVersion: VERSION,

@@ -14,8 +14,8 @@ function progress(x, diff){
     data.circle.progress += 1*diff
 }
 
-function openLootbox(stack = 0){
-    let canOpen = data.circle.progress >= 0
+function openLootbox(){
+    let canOpen = data.circle.progress >= 100
     let text = document.getElementById("lootboxText");
 
     if(!canOpen) text.innerHTML = `The Circle is not yet ready.`
@@ -26,10 +26,11 @@ function openLootbox(stack = 0){
 
     if(!canOpen) return
 
-    let rarity = stack > 0 ? getRarity(stack) : getRarity(getRandom(1, 101))
+    let rarity = getRarity(getRandom(1, 101))
     let item = getRandomItem(rarity.id)
     text.innerHTML = `You got a <span>${rarity.name} <b>${item.name}</b></span>!`
     text.children[0].style.color = rarity.color
 
     data.circle.progress = 0
+    data.items.push(item)
 }
