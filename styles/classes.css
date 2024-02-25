@@ -52,3 +52,11 @@
     position: relative;
     display: grid;
 }
+#lootboxText{
+    opacity: 0;
+    transition: 1s;
+}
+#lootboxText.fade-in {
+    opacity: 1;
+    transition: 1s;
+}

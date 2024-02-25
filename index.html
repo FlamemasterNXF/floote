@@ -18,6 +18,8 @@
     <script defer src="src/etc/tabs.js"></script>
 
     <script defer src="src/circle.js"></script>
+    <script defer src="src/items/itemRarity.js"></script>
+    <script defer src="src/items/itemDB.js"></script>
 
     <script defer src="src/data.js"></script>
     <script defer src="src/main.js"></script>
@@ -61,11 +63,12 @@
         <button class="tabButton" id="exNav" onclick="switchTab('ex')" style="color: #cd985c; border-color: #614200">The Circle</button>>
     </div>
     <div class="flexBox" id="exPage" style="flex-direction: column">
-        <div id="circleContainer" style="margin-top: 5rem" onclick="console.log('pog')">
+        <div id="circleContainer" style="margin-top: 5rem" onclick="openLootbox()">
             <div class="circular-progress" id="bar0">
                 <div class="value-container" style="font-family: DosisLight; font-size: 1.2rem">0%</div>
             </div>
         </div>
+        <div class="centeredTexts" id="lootboxText" style="color: goldenrod; margin-top: 1rem">You gained a free gwa!</div>
     </div>
 </div>
 </body>
