@@ -74,3 +74,10 @@
     opacity: 1;
     transition: 1s;
 }
+.remembrance{
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    border: 1px solid darkgreen;
+    background: black;
+}

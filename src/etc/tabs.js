@@ -9,4 +9,7 @@ function switchTab(tab, loading){
     else document.getElementById(`itemRowContainer`).replaceChildren()
 
     if(tab === 'merge') updateAnnihilationTexts()
+
+    if(tab === 'remembrance') makeRemembrance()
+    else document.getElementById(`remContainer`).replaceChildren()
 }

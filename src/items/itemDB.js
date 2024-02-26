@@ -117,11 +117,22 @@ const items = [
         {
             name: "Wilted Clover",
             desc: "Unknown Purpose.",
-            icon: "../../res/placeholder.png",
+            icon: "../../res/wilted_clover.png",
             rarity: 4,
 
         },
     ],
+
+    // Rarity 5 (Unobtainable)
+    [
+        {
+            name: "Four-Leaf Clover",
+            desc: "Chance Incarnate. You have created the Impossible.",
+            icon: "../../res/clover.png",
+            rarity: 5,
+
+        },
+    ]
 ]
 
 function getRandomItem(rarity){

@@ -24,6 +24,11 @@ const rarities = [
         color: "#ffcc00",
         id: 4,
     },
+    {
+        name: "",
+        color: "lightgreen",
+        id: 4,
+    },
 ]
 
 function getRarity(value){
