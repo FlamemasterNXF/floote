@@ -7,7 +7,7 @@ function makeRemembrance(){
         rem.style.border = `1px solid ${hasClover ? '#3f943f' : '#606060'}`
 
         let icon = document.createElement('img')
-        icon.src = hasClover ? `../../res/wilted_clover.png` : `../../res/missing.png`
+        icon.src = hasClover ? `res/wilted_clover.png` : `res/missing.png`
 
         rem.append(icon)
         document.getElementById('remContainer').append(rem)
