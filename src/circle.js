@@ -15,7 +15,7 @@ function progress(x, diff){
 }
 
 function openLootbox(stack = 0){
-    let canOpen = data.circle.progress >= 0
+    let canOpen = data.circle.progress >= 100
     let text = document.getElementById("lootboxText");
 
     if(!canOpen) text.innerHTML = `The Circle is not yet ready.`
