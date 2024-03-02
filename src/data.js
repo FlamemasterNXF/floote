@@ -53,8 +53,8 @@ function fixSave(main=getDefaultObject(), data) {
 function fixOldSaves(){
     let extra = false
 
-    if(data.loadedVersion !== "0.2") data.loadedVersion = "0.2"
-    if(data.loadedVersion !== "0.1"){
+    if(data.loadedVersion === "0.1") data.loadedVersion = "0.2"
+    if(data.loadedVersion === "0.3.3"){
         for (let i = 0; i < data.items.length; i++) {
             for (let j = 0; j < data.items[i].length; j++) {
                 data.items[i][j].natural = i === 5
@@ -114,7 +114,6 @@ function importSave(x) {
             return
         }
         data = Object.assign(getDefaultObject(), JSON.parse(atob(x)))
-        if(data.isBeta && !IS_BETA) return createAlert('Beta Save detected!', 'You tried to load a Beta Save into the main version. This is not allowed, sorry :(', 'Dang it!')
         save()
         location.reload()
     }
