@@ -53,7 +53,7 @@ function fixSave(main=getDefaultObject(), data) {
 function fixOldSaves(){
     let extra = false
 
-    if(data.loadedVersion !== "0.2") fullReset()
+    if(data.loadedVersion !== "0.2") data.loadedVersion = "0.2"
     if(data.loadedVersion !== "0.1"){
         for (let i = 0; i < data.items.length; i++) {
             for (let j = 0; j < data.items[i].length; j++) {
