@@ -1,5 +1,6 @@
+let remembranceReq = 6
 function makeRemembrance(){
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < remembranceReq; i++) {
         let hasClover = getClovers() > i
 
         let rem = document.createElement('button')
@@ -13,7 +14,7 @@ function makeRemembrance(){
         document.getElementById('remContainer').append(rem)
     }
 
-    DOM(`remember`).style.display = getClovers() >= 3 ? 'block' : 'none'
+    DOM(`remember`).style.display = getClovers() >= remembranceReq ? 'block' : 'none'
 }
 function refreshRemembrance(){
     document.getElementById(`remContainer`).replaceChildren()
@@ -28,14 +29,14 @@ function getClovers(){
 }
 
 function remember(){
-    if(getClovers() < 3) return
+    if(getClovers() < remembranceReq) return
 
     let clover = getRandomItem(5)
     data.items[5].push(clover)
 
     let removed = 0
     for (let i = 0; i < data.items[4].length; i++) {
-        if(removed >= 3) break;
+        if(removed >= remembranceReq) break;
         if(data.items[4][i].name === "Wilted Clover"){
             data.items[4] = data.items[4].slice(0, i).concat(data.items[4].slice(i+1))
             removed++
