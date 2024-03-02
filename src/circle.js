@@ -16,12 +16,12 @@ function progress(x, diff){
 
 function openLootbox(stack = 0){
     let canOpen = data.circle.progress >= 100
-    let text = document.getElementById("lootboxText");
+    let text = document.getElementById("lootboxText")
 
     if(!canOpen) text.innerHTML = `The Circle is not yet ready.`
-    text.classList.add("fade-in");
+    text.classList.add("fade-in")
     setTimeout(function () {
-        text.classList.remove("fade-in");
+        text.classList.remove("fade-in")
     }, 2000);
 
     if(!canOpen) return

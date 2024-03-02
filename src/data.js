@@ -2,7 +2,7 @@
 const D = x => new Decimal(x)
 
 //Version Flags
-const VERSION = "0.1"
+const VERSION = "0.2"
 const SAVE_PATH = () => "nxfFlootesave"
 
 //create all the variables in a data object for saving
@@ -53,6 +53,7 @@ function fixSave(main=getDefaultObject(), data) {
 function fixOldSaves(){
     let extra = false
 
+    if(data.loadedVersion !== "0.2") fullReset()
     if(data.loadedVersion !== "0.1"){
         for (let i = 0; i < data.items.length; i++) {
             for (let j = 0; j < data.items[i].length; j++) {
