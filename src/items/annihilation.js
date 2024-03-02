@@ -26,6 +26,7 @@ function annihilate(i){
 
     for (let j = 0; j < amountGained; j++) {
         let item = getRandomItem(i+1)
+        item.natural = false
         data.items[i+1].push(item)
         gainedItemNames.push(item.name)
     }

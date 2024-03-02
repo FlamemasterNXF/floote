@@ -8,7 +8,7 @@ function makeRemembrance(){
         rem.style.border = `1px solid ${hasClover ? '#3f943f' : '#606060'}`
 
         let icon = document.createElement('img')
-        icon.src = hasClover ? `res/wilted_clover.png` : `res/missing.png`
+        icon.src = hasClover ? `res/items/wilted_clover.png` : `res/other/missing_clover.png`
 
         rem.append(icon)
         document.getElementById('remContainer').append(rem)
@@ -32,6 +32,7 @@ function remember(){
     if(getClovers() < remembranceReq) return
 
     let clover = getRandomItem(5)
+    clover.natural = true
     data.items[5].push(clover)
 
     let removed = 0

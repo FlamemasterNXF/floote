@@ -11,10 +11,13 @@ function makeItems(){
         for (let j = 0; j < data.items[i].length; j++) {
             let item = document.createElement('button')
             let rarity = rarities[data.items[i][j].rarity]
+
+            if(data.items[i][j].natural) item.style.boxShadow = `0px 0px 10px 0px ${rarity.color}`
             item.style.border = `1px solid ${rarity.color}`
             item.style.background = 'black'
-            item.style.marginLeft = `0.2rem`
-            item.style.marginRight = `0.2rem`
+            item.style.marginLeft = `0.4rem`
+            item.style.marginRight = `0.4rem`
+
             item.setAttribute("tooltip", `A ${rarity.name} ${data.items[i][j].name}${i !== 5 ? `\n${rarity.effectDesc}` : ``}\n\n"${data.items[i][j].desc}"`)
 
             let icon = document.createElement('img')

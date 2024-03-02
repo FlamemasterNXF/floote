@@ -28,6 +28,7 @@ function openLootbox(stack = 0){
 
     let rarity = stack > 0 ? getRarity(stack) : getRarity(getRandom(1, 101))
     let item = getRandomItem(rarity.id)
+    item.natural = true
     text.innerHTML = `You got a <span>${rarity.name} <b>${item.name}</b></span>!`
     text.children[0].style.color = rarity.color
 

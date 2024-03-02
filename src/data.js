@@ -2,7 +2,7 @@
 const D = x => new Decimal(x)
 
 //Version Flags
-const VERSION = "0.3.3"
+const VERSION = "0.1"
 const SAVE_PATH = () => "nxfFlootesave"
 
 //create all the variables in a data object for saving
@@ -52,6 +52,18 @@ function fixSave(main=getDefaultObject(), data) {
 }
 function fixOldSaves(){
     let extra = false
+
+    if(data.loadedVersion !== "0.1"){
+        for (let i = 0; i < data.items.length; i++) {
+            for (let j = 0; j < data.items[i].length; j++) {
+                data.items[i][j].natural = i === 5
+                if(data.items[i][j].icon === "res/placeholder.png") data.items[i][j].icon = "res/items/placeholder.png"
+                if(data.items[i][j].icon === "res/wilted_clover.png") data.items[i][j].icon = "res/items/wilted_clover.png"
+                if(data.items[i][j].icon === "res/clover.png") data.items[i][j].icon = "res/items/clover.png"
+            }
+        }
+        data.loadedVersion = "0.1"
+    }
 
     return extra
 }
