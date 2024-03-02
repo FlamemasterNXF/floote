@@ -35,6 +35,7 @@ function openLootbox(stack = 0){
     data.items[item.rarity].push(item)
 }
 
+// This function may seem unnecessary, but I'm keeping it in case I expand the Speed boost system in the future
 function getCircleSpeedIncrease(){
-    return (getTotalItems(3)/10)+(data.items[3].length/2)+(data.items[4].length*2)
+    return getTotalRarityEffect()
 }

@@ -15,7 +15,7 @@ function makeItems(){
             item.style.background = 'black'
             item.style.marginLeft = `0.2rem`
             item.style.marginRight = `0.2rem`
-            item.setAttribute("tooltip", `A ${rarity.name} ${data.items[i][j].name}\n\n"${data.items[i][j].desc}"`)
+            item.setAttribute("tooltip", `A ${rarity.name} ${data.items[i][j].name}${i !== 5 ? `\n${rarity.effectDesc}` : ``}\n\n"${data.items[i][j].desc}"`)
 
             let icon = document.createElement('img')
             icon.src = `${data.items[i][j].icon}`
