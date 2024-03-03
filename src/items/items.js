@@ -21,7 +21,7 @@ function makeItems(){
             item.setAttribute("tooltip", `A ${rarity.name} ${data.items[i][j].name}${i !== 5 ? `\n${rarity.effectDesc}` : ``}\n\n"${data.items[i][j].desc}"`)
 
             let icon = document.createElement('img')
-            icon.src = `${data.items[i][j].icon}`
+            icon.src = `${getItemSprite(data.items[i][j].name)}`
 
             item.append(icon)
             document.getElementById(`itemRow${rowNum}`).append(item)

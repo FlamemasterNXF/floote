@@ -4,21 +4,18 @@ const items = [
         {
             name: "Broken Wheel",
             desc: "A shattered, useless circle.",
-            icon: "res/items/broken_wheel.png",
             natural: false,
             rarity: 0,
         },
         {
             name: "Burnt Match",
             desc: "Once upon a time, there was warmth.",
-            icon: "res/items/burnt_match.png",
             natural: false,
             rarity: 0,
         },
         {
             name: "Shattered Plate",
             desc: "Pick up the pieces.",
-            icon: "res/items/broken_plate.png",
             natural: false,
             rarity: 0,
         },
@@ -29,21 +26,18 @@ const items = [
         {
             name: "Golden Coin",
             desc: "A valuable item.",
-            icon: "res/items/golden_coin.png",
             natural: false,
             rarity: 1,
         },
         {
             name: "Circle Statue",
             desc: "Imitation of Greatness.",
-            icon: "res/items/circle_statue.png",
             natural: false,
             rarity: 1,
         },
         {
             name: "Cube",
             desc: "Inferior Form.",
-            icon: "res/items/cube.png",
             natural: false,
             rarity: 1,
         },
@@ -54,21 +48,18 @@ const items = [
         {
             name: "Great Wheel",
             desc: "A strong circle, but one used for a lesser purpose.",
-            icon: "res/items/greater_wheel.png",
             natural: false,
             rarity: 2,
         },
         {
             name: "Cup of Water",
             desc: "It seems to never be empty.",
-            icon: "res/items/water_glass.png",
             natural: false,
             rarity: 2,
         },
         {
             name: "Glasses",
             desc: "To more closely observe.",
-            icon: "res/items/glasses.png",
             natural: false,
             rarity: 2,
         },
@@ -79,21 +70,18 @@ const items = [
         {
             name: "Golden Compass",
             desc: "Find your way.",
-            icon: "res/items/golden_compass.png",
             natural: false,
             rarity: 3,
         },
         {
             name: "Eternal Flame",
             desc: "Warmth for an empty world.",
-            icon: "res/items/bad_flame.png",
             natural: false,
             rarity: 3,
         },
         {
             name: "Miniature Circle",
             desc: "Forever Spinning.",
-            icon: "res/items/mini_circle.png",
             natural: false,
             rarity: 3,
         },
@@ -104,21 +92,18 @@ const items = [
         {
             name: "Light",
             desc: "Vision is key, after all.",
-            icon: "res/items/light.png",
             natural: false,
             rarity: 4,
         },
         {
             name: "Thought",
             desc: "Understanding.",
-            icon: "res/items/thought.png",
             natural: false,
             rarity: 4,
         },
         {
             name: "Wilted Clover",
             desc: "Unknown Purpose.",
-            icon: "res/items/wilted_clover.png",
             natural: false,
             rarity: 4,
         },
@@ -129,12 +114,35 @@ const items = [
         {
             name: "Four-Leaf Clover",
             desc: "Chance Incarnate. You have created the Impossible.",
-            icon: "res/items/clover.png",
             natural: false,
             rarity: 5,
         },
     ]
 ]
+
+const itemIcons = {
+    "Broken Wheel" : "res/items/broken_wheel.png",
+    "Burnt Match" : "res/items/burnt_match.png",
+    "Shattered Plate" : "res/items/broken_plate.png",
+
+    "Golden Coin" : "res/items/golden_coin.png",
+    "Circle Statue" : "res/items/circle_statue.png",
+    "Cube" : "res/items/cube.png",
+
+    "Great Wheel" : "res/items/greater_wheel.png",
+    "Cup of Water" : "res/items/water_glass.png",
+    "Glasses" : "res/items/glasses.png",
+
+    "Golden Compass" : "res/items/golden_compass.png",
+    "Eternal Flame" : "res/items/bad_flame.png",
+    "Miniature Circle" : "res/items/mini_circle.png",
+
+    "Light" : "res/items/light.png",
+    "Thought" : "res/items/thought.png",
+    "Wilted Clover" : "res/items/wilted_clover.png",
+
+    "Four-Leaf Clover" : "res/items/clover.png",
+}
 
 function getRandomItem(rarity){
     let range = items[rarity].length
@@ -142,3 +150,5 @@ function getRandomItem(rarity){
         ...items[rarity][getRandom(0, range)]
     }
 }
+
+let getItemSprite = (name) => itemIcons[name]
