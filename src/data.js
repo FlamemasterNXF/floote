@@ -54,7 +54,7 @@ function fixOldSaves(){
     let extra = false
 
     if(data.loadedVersion === "0.1") data.loadedVersion = "0.2"
-    if(data.loadedVersion === "0.3.3"){
+    if(data.loadedVersion === "0.3.3"){ // This is 0.3.3 because that's what the Variable was for a while, I forgot to change it from the project I copied it from (Ordinal Pringles)
         for (let i = 0; i < data.items.length; i++) {
             for (let j = 0; j < data.items[i].length; j++) {
                 data.items[i][j].natural = i === 5
